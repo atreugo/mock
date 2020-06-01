@@ -9,7 +9,7 @@ func (ln *Listener) Accept() (net.Conn, error) {
 		return nil, ln.AcceptError
 	}
 
-	return ln.LN.Accept()
+	return ln.Listener.Accept()
 }
 
 func (ln *Listener) Close() error {
@@ -19,11 +19,11 @@ func (ln *Listener) Close() error {
 		return ln.CloseError
 	}
 
-	return ln.LN.Close()
+	return ln.Listener.Close()
 }
 
 func (ln *Listener) Addr() net.Addr {
 	ln.AddrCalled = true
 
-	return ln.LN.Addr()
+	return ln.Listener.Addr()
 }

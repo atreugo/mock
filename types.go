@@ -20,7 +20,7 @@ type Conn struct {
 }
 
 type Listener struct {
-	LN net.Listener
+	Listener net.Listener
 
 	AcceptError error
 	CloseError  error
