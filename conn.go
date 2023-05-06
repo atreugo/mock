@@ -37,14 +37,14 @@ func (c *Conn) LocalAddr() net.Addr {
 	return zeroTCPAddr
 }
 
-func (c *Conn) SetDeadline(t time.Time) error {
+func (c *Conn) SetDeadline(_ time.Time) error {
 	return c.ErrSetDeadline
 }
 
-func (c *Conn) SetReadDeadline(t time.Time) error {
+func (c *Conn) SetReadDeadline(_ time.Time) error {
 	return c.ErrSetReadDeadline
 }
 
-func (c *Conn) SetWriteDeadline(t time.Time) error {
+func (c *Conn) SetWriteDeadline(_ time.Time) error {
 	return c.ErrSetWriteDeadline
 }
