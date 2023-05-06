@@ -1,3 +1,3 @@
 module github.com/atreugo/mock
 
-go 1.15
+go 1.17
